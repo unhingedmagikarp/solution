@@ -1,0 +1,141 @@
+$yellow: rgb(240, 225, 24);
+$red: rgb(230, 108, 85);
+$pink: rgb(242, 196, 196);
+$blue: rgb(29, 108, 147);
+$grey: rgb(240, 240, 240);
+$lightBlue: rgb(235, 244, 250);
+$lightGrey: rgb(209, 209, 209);
+$darkGrey: rgb(76, 76, 76);
+
+@keyframes slideIn {
+  0% {
+    transform: translate(0, 100%);
+    background: #fff;
+  }
+  100% {
+    transform: translate(0, 0);
+    background: $darkGrey;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translate(0, 0);
+    background: #fff;
+  }
+  100% {
+    transform: translate(0, 100%);
+    background: $darkGrey;
+  }
+}
+
+.fill-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: 0.6s slideIn forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-window.close {
+  animation: 0.6s slideOut forwards;
+}
+
+.modal-center {
+  background: #fff;
+  height: 300px;
+  width: 400px;
+  display: block;
+}
+
+.item {
+  margin: auto;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.available {
+  border: 1px solid $red;
+  color: $red;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  &:hover {
+    color: #fff;
+    background: $red;
+  }
+}
+
+.disabled {
+  border: 1px solid rgb(216, 216, 216);
+  background: rgb(216, 216, 216);
+  color: rgb(157, 157, 157);
+}
+
+.selected {
+  border: 1px solid $red;
+  color: #fff;
+  background: $red;
+}
+
+.dayBlock {
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.container2 {
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.days {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-center {
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-confirm {
+  margin-top: 1.5rem !important;
+  border: 1px solid $blue;
+  color: $blue;
+  background: #fff;
+  font-family: CooperHewitt-Bold;
+  font-size: 14px;
+  padding-top: 5px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 3px rgb(150, 150, 150);
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background: $blue;
+  }
+}
+
+.cooperhewitt {
+  font-family: CooperHewitt-Bold !important;
+}

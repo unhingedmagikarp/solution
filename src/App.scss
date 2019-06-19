@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "CooperHewitt-Bold";
+  src: url("Assets/fonts/CooperHewitt-Bold.eot?") format("eot"),
+    url("Assets/fonts/CooperHewitt-Bold.woff2") format("woff2"),
+    url("Assets/fonts/CooperHewitt-Bold.woff") format("woff"),
+    url("Assets/fonts/CooperHewitt-Bold.ttf") format("truetype"),
+    url("Assets/fonts/CooperHewitt-Bold.svg#CooperHewitt-Bold") format("svg");
+}
+
+@font-face {
+  font-family: "GT-Pressura-Regular";
+  src: url("Assets/fonts/GT-Pressura-Regular.eot?") format("eot"),
+    url("Assets/fonts/GT-Pressura-Regular.woff2") format("woff2"),
+    url("Assets/fonts/GT-Pressura-Regular.woff") format("woff"),
+    url("Assets/fonts/GT-Pressura-Regular.ttf") format("truetype")
+      // url("Assets/fonts/GT-Pressura-Regular.svg#GT-Pressura-Regular")
+      format("svg");
+}
+
+@font-face {
+  font-family: "GTPressuraMono";
+  src: url("Assets/fonts/GTPressuraMono.eot?") format("eot"),
+    url("Assets/fonts/GTPressuraMono.woff2") format("woff2"),
+    url("Assets/fonts/GTPressuraMono.woff") format("woff"),
+    url("Assets/fonts/GTPressuraMono.ttf") format("truetype"),
+    url("Assets/fonts/GTPressuraMono.svg#GTPressuraMono") format("svg");
+}
+
+@import "Components/Modal.scss";
+
+$yellow: rgb(240, 225, 24);
+$red: rgb(230, 108, 85);
+$pink: rgb(242, 196, 196);
+$blue: rgb(29, 108, 147);
+$grey: rgb(240, 240, 240);
+$lightBlue: rgb(235, 244, 250);
+$lightGrey: rgb(209, 209, 209);
+$darkGrey: rgb(76, 76, 76);
+
+body {
+  font-family: CooperHewitt-Bold;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease;
+  background: white;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
+  color: $blue;
+}
+
+p {
+  font-size: 20px;
+  color: $blue;
+  font-family: GT-Pressura-Regular;
+}
+
+p.small {
+  font-size: 18px;
+}
+
+.smallText {
+  color: $blue;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: GT-Pressura-Regular;
+  vertical-align: text-bottom;
+  //   margin-left: 2rem;
+}
+
+.delivery {
+  background-color: $lightBlue;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.side {
+  flex: 30%;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.modalTrigger {
+  display: flex;
+  justify-content: flex-start;
+  border-top: 2px solid $lightGrey;
+  border-bottom: 2px solid $lightGrey;
+  align-items: baseline !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.date {
+  align-self: end;
+  margin-left: 1rem;
+}
+
+.change {
+  background-color: $lightBlue;
+  max-height: 2rem;
+  align-self: center;
+  display: flex;
+  align-content: center;
+  margin: auto;
+  margin-right: 0;
+}
+
+.change > p {
+  border-bottom: 2px solid $blue;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+
+.calIcon {
+  padding: 10px 10px 10px 10px;
+  border-radius: 25px;
+  background-color: $lightBlue;
+  display: flex;
+  justify-content: center;
+}
+
+.van {
+  margin-right: 0.6rem;
+  float: left;
+}
+
+.day {
+  position: absolute;
+  align-self: flex-end;
+  color: $blue;
+  font-family: GT-Pressura-Regular;
+}
+
+.calendar {
+  background: #fff;
+}
+
+.fill-window {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  //   background: red;
+}
